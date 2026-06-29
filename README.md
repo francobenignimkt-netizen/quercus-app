@@ -69,3 +69,4 @@ src/
 - **Módulo 2**: Portal cliente completo (novedades, cuenta, galería)
 - **Módulo 3**: Panel empleados (fichaje GPS, checklist, fotos)
 - **Módulo 4**: Panel admin (gestión de clientes, reportes)
+- 
