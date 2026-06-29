@@ -1,0 +1,117 @@
+.wrap {
+  min-height: 100vh;
+  background: var(--q-lighter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+}
+
+.emblem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.wordmark {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: var(--q-dark);
+}
+
+.tagline {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  color: var(--q-muted);
+  text-transform: uppercase;
+}
+
+.card {
+  background: var(--q-white);
+  border: 1px solid var(--q-border);
+  border-radius: var(--q-radius-lg);
+  padding: 24px;
+  width: 100%;
+  max-width: 360px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--q-text);
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-bottom: 14px;
+}
+
+.field label {
+  display: block;
+  font-size: 11.5px;
+  color: var(--q-muted);
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--q-border);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--q-text);
+  background: var(--q-white);
+  transition: border-color 0.15s;
+}
+
+.field input:focus {
+  border-color: var(--q-mid);
+}
+
+.error {
+  font-size: 12.5px;
+  color: var(--q-danger);
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: #fef2f2;
+  border-radius: 6px;
+  border: 1px solid #fecaca;
+}
+
+.btnMain {
+  width: 100%;
+  padding: 12px;
+  background: var(--q-dark);
+  color: var(--q-white);
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.15s;
+  margin-bottom: 14px;
+}
+
+.btnMain:hover:not(:disabled) {
+  background: var(--q-mid);
+}
+
+.btnMain:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.forgot {
+  text-align: center;
+  font-size: 12px;
+  color: var(--q-muted);
+}
+
+.forgot span {
+  color: var(--q-dark);
+  cursor: pointer;
+  font-weight: 500;
+}

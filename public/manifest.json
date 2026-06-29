@@ -1,0 +1,9 @@
+{
+  "name": "QUERCUS",
+  "short_name": "Quercus",
+  "description": "Gestión de espacios exteriores",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4faf7",
+  "theme_color": "#296645"
+}
