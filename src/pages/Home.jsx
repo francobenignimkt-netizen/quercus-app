@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../lib/AuthContext'
 import styles from './Home.module.css'
 
 export default function Home() {
   const { user } = useAuth()
+  const navigate = useNavigate()
   const nombre = user?.email?.split('@')[0] || 'cliente'
 
   return (
@@ -12,7 +14,6 @@ export default function Home() {
         <p>Tu jardín está en buenas manos</p>
       </div>
 
-      {/* Próxima visita */}
       <div className={styles.nextCard}>
         <div className={styles.ncLabel}>Próxima visita</div>
         <div className={styles.ncDate}>Jueves 3 de julio, 9:00 hs</div>
@@ -26,9 +27,8 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Acciones rápidas */}
       <div className={styles.grid}>
-        <div className={styles.card}>
+        <div className={styles.card} onClick={() => navigate('/novedades')}>
           <div className={styles.cardIcon}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
@@ -38,7 +38,7 @@ export default function Home() {
           <div className={styles.cardTitle}>Subir foto</div>
           <div className={styles.cardSub}>Compartir novedad</div>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} onClick={() => navigate('/cuenta')}>
           <div className={styles.cardIcon}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
@@ -48,7 +48,7 @@ export default function Home() {
           <div className={styles.cardTitle}>Mi cuenta</div>
           <div className={styles.cardSub}>Facturas y pagos</div>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} onClick={() => navigate('/novedades')}>
           <div className={styles.cardIcon}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <circle cx="12" cy="12" r="10"/>
@@ -59,7 +59,7 @@ export default function Home() {
           <div className={styles.cardTitle}>Presupuesto</div>
           <div className={styles.cardSub}>Solicitar trabajo</div>
         </div>
-        <div className={styles.card}>
+        <div className={styles.card} onClick={() => navigate('/galeria')}>
           <div className={styles.cardIcon}>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <rect x="3" y="3" width="18" height="18" rx="2"/>
@@ -72,7 +72,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Novedades */}
       <div className={styles.secTitle}>Últimas novedades</div>
       <div className={styles.actItem}>
         <div className={styles.dot}></div>
