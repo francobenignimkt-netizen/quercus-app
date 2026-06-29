@@ -28,7 +28,7 @@ export default function App() {
           }>
             <Route index element={<Navigate to="/home" replace />} />
             <Route path="home" element={<Home />} />
-            <Route path="novedades" element={<Novedades />} />
+           <Route path="novedades" element={<Novedades />} />
             <Route path="cuenta" element={<Placeholder title="Mi cuenta" />} />
             <Route path="galeria" element={<Placeholder title="Galería" />} />
           </Route>
